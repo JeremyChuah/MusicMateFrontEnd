@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "MusicMateFE.app"
-               BlueprintName = "MusicMateFE"
-               ReferencedContainer = "container:MusicMateFE.xcodeproj">
+               BuildableName = "MusicMate.app"
+               BlueprintName = "MusicMate"
+               ReferencedContainer = "container:MusicMate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "MusicMateFETests.xctest"
-               BlueprintName = "MusicMateFETests"
-               ReferencedContainer = "container:MusicMateFE.xcodeproj">
+               BuildableName = "MusicMateTests.xctest"
+               BlueprintName = "MusicMateTests"
+               ReferencedContainer = "container:MusicMate.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "MusicMateFE.app"
-            BlueprintName = "MusicMateFE"
-            ReferencedContainer = "container:MusicMateFE.xcodeproj">
+            BuildableName = "MusicMate.app"
+            BlueprintName = "MusicMate"
+            ReferencedContainer = "container:MusicMate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "MusicMateFE.app"
-            BlueprintName = "MusicMateFE"
-            ReferencedContainer = "container:MusicMateFE.xcodeproj">
+            BuildableName = "MusicMate.app"
+            BlueprintName = "MusicMate"
+            ReferencedContainer = "container:MusicMate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

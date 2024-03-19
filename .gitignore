@@ -1,3 +1,5 @@
+.env
+
 # OSX
 #
 .DS_Store
@@ -64,3 +66,4 @@ yarn-error.log
 
 # testing
 /coverage
+node_modules
