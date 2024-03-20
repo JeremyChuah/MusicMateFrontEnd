@@ -63,7 +63,7 @@ const Login = ({navigation}: LoginScreenProps) => {
           value={email}
           onChangeText={text => setEmail(text)}
           placeholderTextColor={'#AEAEAE'}
-          placeholder="Email"
+          placeholder="Email@utexas.edu"
           style={styles.input}
         />
 
@@ -105,7 +105,7 @@ const Login = ({navigation}: LoginScreenProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: 'pink',
   },
   formContainer: {
     justifyContent: 'center',

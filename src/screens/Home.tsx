@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from 'react-native'
 import React, { useContext, useState, useEffect } from 'react'
 //react native elements
 import { FAB } from '@rneui/themed'
@@ -7,6 +7,9 @@ import Snackbar from 'react-native-snackbar'
 
 //context API
 import {AppwriteContext} from '../appwrite/AppwriteContext'
+
+// components
+import FeedElement from '../components/FeedElement'
 
 type UserObj = {
   name: String;
@@ -47,11 +50,34 @@ const Home = () => {
   
     return (
       <SafeAreaView style={styles.container}>
-        <View style={styles.welcomeContainer}>
-          <Text style={styles.message}>
-            Music Mate
+        <View style={styles.topLogoBubble}>
+          <Text style={styles.topLogoText}>
+            MusicMate
           </Text>
         </View>
+        <View style={styles.qotd}> 
+          <Text style={styles.qotdText}>
+            What's your go-to upbeat song?
+          </Text>
+        </View>
+        <ScrollView style={styles.feedContainer}>
+          <FeedElement 
+            name="Lisa Smith"
+            daysLastActive={0}
+            pfpPath={require('../pfps/lisa.png')}
+          />
+          <FeedElement 
+            name="Stu Hicks"
+            daysLastActive={2}
+            pfpPath={require('../pfps/stu.png')}
+          />
+          <FeedElement 
+            name="Brene Lox"
+            daysLastActive={3}
+            pfpPath={require('../pfps/brene.png')}
+          />
+        </ScrollView>
+        
         <FAB
           placement="right"
           color="#f02e65"
@@ -68,26 +94,40 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0B0D32',
+    backgroundColor: 'pink',
+  }, 
+  topLogoBubble: {
+    backgroundColor: '#ADD8E6',
+    borderRadius: 24,
+    padding: 8,
+    margin: 8,
+    width: '30%',
+    borderWidth: 2,
+    borderColor: 'black',
+    
+  }, 
+  topLogoText: {
+    color: 'black',
+    textAlign: 'center'
   },
-  welcomeContainer: {
-    padding: 12,
+  qotd: {
+    backgroundColor: '#e3b0e9',
+    marginHorizontal: 64,
+    borderRadius: 24,
+    padding: 8,
+    marginVertical: 24,
 
-    flex: 1,
-    alignItems: 'center',
+
   },
-  message: {
-    fontSize: 26,
-    fontWeight: '500',
-    color: '#FFFFFF',
-  },
-  userContainer: {
-    marginTop: 24,
-  },
-  userDetails: {
-    fontSize: 20,
-    color: '#FFFFFF',
-  },
+  qotdText: {
+    color: 'white',
+    fontSize: 24,
+    textAlign: 'center',
+
+  }, 
+  feedContainer: {
+    marginBottom: 72,
+  }
 });
 
 export default Home
