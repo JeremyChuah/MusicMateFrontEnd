@@ -1,44 +1,46 @@
-import { SafeAreaView, StyleSheet, Text, View, Image } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const FeedElement = (props) => {
   return (
     <SafeAreaView style={styles.container}>
-        <View style={styles.profileContainer}>
-          <View style={styles.pfp}>
-            <Image
-            source={props.pfpPath}
-            style={styles.pfpImage}
-            >
-            </Image>
-          </View>
-          <View style={styles.nameContainer}>
-            <Text style={styles.name}>{props.name}</Text>
-            {props.daysLastActive == 0 &&
-                  <Text style={styles.activeTodayText}>Active Today</Text>
-            }
-            {props.daysLastActive != 0 &&
-                  <Text style={styles.activeStatusText}>Active {props.daysLastActive} Days Ago</Text>
-            }
-          </View>
-        </View>
-        <View style={styles.answerContainer}>
-            <View style={styles.labelContainer}>
+      <TouchableOpacity>
+          <View style={styles.profileContainer}>
+            <View style={styles.pfp}>
+              <Image
+              source={props.pfpPath}
+              style={styles.pfpImage}
+              >
+              </Image>
+            </View>
+            <View style={styles.nameContainer}>
+              <Text style={styles.name}>{props.name}</Text>
               {props.daysLastActive == 0 &&
-                <Text style={styles.labelText}>Go-To Upbeat Song:</Text>
+                    <Text style={styles.activeTodayText}>Active Today</Text>
               }
               {props.daysLastActive != 0 &&
-                <Text style={styles.labelText}>Favorite Song:</Text>
+                    <Text style={styles.activeStatusText}>Active {props.daysLastActive} Days Ago</Text>
               }
             </View>
-            <View style={styles.songBannerContainer}>
-              <Image 
-                source={require('../songs/taylorswift.png')}
-                style={styles.songImage}
-              />
+          </View>
+          <View style={styles.answerContainer}>
+              <View style={styles.labelContainer}>
+                {props.daysLastActive == 0 &&
+                  <Text style={styles.labelText}>Go-To Upbeat Song:</Text>
+                }
+                {props.daysLastActive != 0 &&
+                  <Text style={styles.labelText}>Favorite Song:</Text>
+                }
+              </View>
+              <View style={styles.songBannerContainer}>
+                <Image 
+                  source={require('../songs/taylorswift.png')}
+                  style={styles.songImage}
+                />
 
-            </View>
-        </View>
+              </View>
+          </View>
+        </TouchableOpacity>
     </SafeAreaView>
   )
 }

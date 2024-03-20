@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
 
   }, 
   feedContainer: {
-    marginBottom: 72,
+    marginBottom: 96,
   }
 });
 
